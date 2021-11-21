@@ -5,7 +5,7 @@
 int main(){
    
    char i;
-   int [][]ans;
+   int ans[10][10];
    scanf("%c",&i);
 
    if(i == 'A'){
