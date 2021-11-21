@@ -6,7 +6,7 @@ LM = -lm
 all: connections
 
 connections: main.o my_mat.o
-	$(CC) $(FLAGS) -rcs main.o my_mat.o 
+	$(CC) -shared -o connections main.o my_mat.o 
 
 main.o: main.c my_mat.h
 	$(CC) $(FLAGS) -c main.c 
@@ -16,4 +16,4 @@ my_mat.o: my_mat.c my_mat.h
 
 
 clean:
-	rm -f *.o 
+	rm -f *.o connections
