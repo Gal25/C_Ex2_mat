@@ -13,9 +13,9 @@ void A(int mat[10][10]){
 }
 void B(int mat[10][10]){
     int i,j;
-    int ans[][];
+    // int ans[10][10];
     scanf("%d %d", &i, &j);
-    ans = C(mat);
+    // ans = C(mat);
      if(mat[i][j] >= 0){
          printf("%s", "True");
      }
@@ -24,21 +24,23 @@ void B(int mat[10][10]){
      }
 }
 
-void print_ans(int[][] ans);
-void C(int[10][10] mat){
-int[10][10] ans , i , j, k;
+int min(int x, int y);
+void print_ans(int ans[10][10]);
+void C(int mat[10][10]){
+int ans[10][10] , i , j, k;
 scanf("%d %d", &i, &j);
 for(k=0; k <= 10; k++){
     for(i=0; i<=10; i++){
         for(j=0; j<=10; j++){
-            ans[i][j]=fmin(ans[i][j],ans[i][k]+ans[k][j]);
+            ans[i][j]= min(ans[i][j],ans[i][k]+ans[k][j]);
         }
     }
 }
 
-print_ans(ans);}
+print_ans(ans);
+}
 
-void print_ans(int[][] ans){
+void print_ans(int ans[10][10]){
     int i,j;
     for(i=0; i<10; i++){
         for(j=0; j<10; j++){
@@ -50,4 +52,9 @@ void print_ans(int[][] ans){
             }  
         }
     }
+}
+
+int min(int x, int y){
+    if (x < y){return x;}
+    else {return y;}
 }
