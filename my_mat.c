@@ -33,7 +33,7 @@ int min(int x, int y){
     else {return y;}
 }
 
-void calc(int i_c,int j_c){
+void calc(int t,int s){
     int ans[10][10], i, j, k;
 
     for (i = 0; i < 10; i++){
@@ -52,8 +52,8 @@ void calc(int i_c,int j_c){
         }
     }
 
-    if(ans[i_c][j_c]>0){
-    printf("%d\n", ans[i_c][j_c]);
+    if(ans[t][s]>0){
+    printf("%d\n", ans[t][s]);
     }else{
     printf("-1\n");   
     }
