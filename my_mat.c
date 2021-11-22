@@ -16,7 +16,7 @@ void A(){
 
 
 void B(){
-int i,j, k;
+int i,j;
 scanf("%d %d", &i, &j);
    
      if(mat[i][j] > 0){
@@ -33,8 +33,7 @@ int min(int x, int y){
     else {return y;}
 }
 
-void calc(int i_c,int j_c)
-{
+void calc(int i_c,int j_c){
     int ans[10][10], i, j, k;
 
     for (i = 0; i < 10; i++){
