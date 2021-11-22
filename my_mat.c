@@ -2,15 +2,18 @@
 #include <math.h>
 #include "my_mat.h"
 
-void A(int mat[10][10]){
+int A(){
      int i, j;
+     int mat[10][10];
      for(i=0; i<=10; i++){
           for(j=0; j <=10; j++){
                scanf("%d", &mat[i][j]);
           }
      }
+     return mat;
 
 }
+
 void B(int mat[10][10]){
     int i,j;
     // int ans[10][10];
