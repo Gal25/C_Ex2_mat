@@ -2,24 +2,24 @@
 #include <math.h>
 #include "my_mat.h"
 
+
 int main(){
-   
-   char i;
-   scanf("%c",&i);
+    char i;   
+   int ans[10][10];
+  
+scanf("%c",&i);
 
-   while (i != 'D'){
-
+while (i!= 'D'){
      if(i == 'A'){
           A();
      }
      if(i == 'B'){
-          int ans[10][10] = A();
-          B(ans);
+          B();
      }
      if(i == 'C'){
-        int ans[10][10] = A();
-          C(ans);
+          C();
      }
+scanf("%c",&i);
 
    }
 
