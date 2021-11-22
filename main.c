@@ -5,20 +5,23 @@
 int main(){
    
    char i;
-   int ans[10][10];
    scanf("%c",&i);
 
-   if(i == 'A'){
-        A(ans);
-   }
-   if(i == 'B'){
-        B(ans);
-   }
-   if(i == 'C'){
-        C(ans);
-   }
+   while (i != 'D'){
 
+     if(i == 'A'){
+          A();
+     }
+     if(i == 'B'){
+          int ans[10][10] = A();
+          B(ans);
+     }
+     if(i == 'C'){
+        int ans[10][10] = A();
+          C(ans);
+     }
 
+   }
 
 return 0;
 }
