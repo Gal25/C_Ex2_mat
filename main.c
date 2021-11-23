@@ -1,11 +1,9 @@
 #include <stdio.h>
-#include <math.h>
 #include "my_mat.h"
 
 
 int main(){
     char i;   
-   int ans[10][10];
   
 scanf("%c",&i);
 
