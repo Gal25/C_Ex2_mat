@@ -46,10 +46,10 @@ void B(){
     }
    
      if(ans[i][j] != MAX_VALUE && i != j){
-        printf("%s", "True \n");
+        printf("%s", "True\n");
      } 
     else{
-        printf("%s", "False \n");
+        printf("%s", "False\n");
     } 
      
 }
