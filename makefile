@@ -5,8 +5,12 @@ LM = -lm
 
 all: connections
 
-connections: main.o my_mat.o
-	$(CC) $(FLAGS) -o connections main.o my_mat.o 
+connections: main.o libconnections.a
+	$(CC) $(FLAGS) -o connections main.o libconnections.a 
+
+libconnections.a: my_mat.o
+	$(AR) -rcs libconnections.a my_mat.o
+
 
 main.o: main.c my_mat.h
 	$(CC) $(FLAGS) -c main.c 
@@ -16,4 +20,4 @@ my_mat.o: my_mat.c my_mat.h
 
 
 clean:
-	rm -f *.o connections
+	rm -f *.o *.a connections
